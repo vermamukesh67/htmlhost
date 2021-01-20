@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to see the value passed for curPage parameter.</p>
+<title>Title</title>
+<button onclick="myFunction()">Click for param value</button>
+<br/>
+<br/>
+<button onclick="openMightyApp()">Open Mighty app</button>
+<br/>
+<br/>
+<button onclick="openMightyAppWithParam()">Open Mighty app with param</button>
+
+<script>
+function myFunction() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const paramValue = urlParams.get('curPage')
+  alert(paramValue);
+}
+
+function openMightyApp() {
+  window.location = "https://alephdemo.page.link/merchant"
+}
+
+function openMightyAppWithParam() {
+  window.location = "https://alephdemo.page.link?callback=https://alephdemo.page.link/m6767"
+}
+</script>
+
+</body>
+</html>
